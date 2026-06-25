@@ -40,10 +40,10 @@ The AI model especially helped with the other two bugs, stating that the issues 
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. User guesses 23
-2. Game returns "Too High"
-3. The user then guesses 5
-4. The game returns "Too Low"
+1. User guesses 34, 19, 5
+2. Game returns "Go Lower"
+3. The user then guesses 2
+4. The game returns "Go Higher"
 5. The user continues till they run out of attempts or they guess the target number.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
@@ -56,8 +56,10 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
 Figured there is still an error in the logic for feedback. 
 Going back to work on it. 
+
 ![alt text](image-5.png)
 
 ![alt text](image-6.png)
@@ -66,7 +68,9 @@ Going back to work on it.
 
 ![alt text](image-8.png)
 
-![alt text](image-9.png) Finally made it. Yay!!!
+![alt text](image-9.png) 
+
+Finally made it. Yay!!!
 
 ## 🧪 Test Results
 
@@ -74,6 +78,7 @@ Going back to work on it.
 # Paste your pytest output here, e.g.:
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
+
 ....................                       [100%]
 28 passed in 0.04s
 ```
