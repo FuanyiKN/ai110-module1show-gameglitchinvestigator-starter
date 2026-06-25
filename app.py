@@ -113,12 +113,12 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
-        if st.session_state.attempts % 2 == 0:
-            secret = str(st.session_state.secret)
-        else:
-            secret = st.session_state.secret
-
-        outcome, message = check_guess(guess_int, secret)
+        # FIX (Bug 4): the secret was being converted to a string on even
+        # attempts, which made check_guess compare numbers as TEXT
+        # (e.g. "5" > "10" is True), so guesses below the secret wrongly said
+        # "Go LOWER". The AI traced it to this line; the secret must stay an
+        # int so the comparison is numeric. Verified by test_string_secret_bug.
+        outcome, message = check_guess(guess_int, st.session_state.secret)
 
         if show_hint:
             st.warning(message)

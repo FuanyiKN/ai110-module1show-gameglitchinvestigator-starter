@@ -31,7 +31,9 @@ I use Claude
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 It suggested that the direction of the hints were reversed, and I verified from my UI tests.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-I didn't run into such an issue.
+I didn't run into such an issue.//Editing this
+
+Originally thought we handled bug 1, but there was still a bug that stringifies the target on even attempts, hence producing erroneous feedback. We had to remove that sectin to fix the issue.
 ---
 
 ## 3. Debugging and testing your fixes
